@@ -1,10 +1,10 @@
 Package: mitoHelicini
-Title: EXPLORE, HANDLE AND EXPORT MITOCHONDRIAL SEQUENCES OF HELICINI LAND SNAILS
+Title: EXPLORE AND EXPORT MITOCHONDRIAL SEQUENCES OF HELICINI LAND SNAILS
 Version: 0.1
 Authors@R: 
-    person("Ondřej", "Korábek", , "first.last@example.com", role = c("aut", "cre"),
+    person("Ondřej", "Korábek", , "korabeko@natur.cuni.cz", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-2522-9165"))
-Description: Explore, handle and export mitochondrial sequences of Helicini land snails. Contains updated data from Korábek et al. 2022 (Diversity 14(1), 24; https://doi.org/10.3390/d14010024). Includes functions for handling the data tailored to the data structure used, with separate file for each locus; data are organized around individual identifiers (see README.txt for detailed explanation of data structure, use export.Helicini()). Some functions may be more broadly useful. Functions use base R wherever possible. Some functions date back to my very beginnings with R and are not very elegant. In some future updates, 'ape' will hopefuly be used more to handle alignments to avoid large character vectors.
+Description: Explore, handle and export mitochondrial sequences of Helicini land snails. Contains updated data from Korábek et al. 2022 (Diversity 14(1), 24; https://doi.org/10.3390/d14010024). In addition, it contains some functions used to analyse the data in publications.
 License: CC BY 4.0  + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
