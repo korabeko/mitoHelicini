@@ -178,6 +178,11 @@ Only name stem is given here, which is preceded by version in the actual file na
 The package provides a set of utilities used to curate and export the data provided with the package and functions used to produce the tree file `tree_Helicini.tre`. The most important function is `representative.alignment`, which helps to export phylogenetically representative (at the level of intraspecific clades, species, or genera) or complete (all individuals) datasets, exporting a concantenate of selected loci or complete mitogenome sequences. As the data provided in the package are aligned, the exported dataset can be radily used for analyses.
 Use `help(function_name)` for details of each function.
 
+### Acknowledgements
+The function `annotatedTreeReader` was written by Marc A. Suchard and originates from a no-longer maintained package "OutbreakTools" (Jombart et al. 2014). It was used in updated form also in later packages (https://www.repidemicsconsortium.org/projects/).
+
+The function `write_supertree` is a modification of a function `write.tree` from the package `ape` by Emmanuel Paradis, Daniel Lawson, and Klaus Schliep. 
+
 ### Funding
 The core of the R package was developed during my postdoc funded by scholarship from the Alexander-von-Humboldt Stiftung.
 
