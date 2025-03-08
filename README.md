@@ -4,7 +4,24 @@
 maintained by Ondřej Korábek (Department of Zoology, Faculty of Science, Charles University, Praha, Czechia, ondrej.korabek@natur.cuni.cz)
 
 ### Installation
-(to be added...)
+Go to R and run:
+```
+library(devtools) # you may need to install "devtools" first
+install_github("korabeko/mitoHelicini")
+```
+
+Alternatively, you may run it without installation.
+
+First, clone the git repository:
+```
+git clone https://github.com/korabeko/mitoHelicini
+```
+Then switch to R:
+```
+library(devtools)
+setwd("PATH/mitoHelicini")
+load_all()
+```
 
 ### For the impatient
 To export an alignment ready for analysis: run `help(representative.alignment)` and then try the function with different settings. To see the whole data, go to the /inst/extdata folder or use `export.Helicini()` to copy its contents into your working directory.
@@ -36,9 +53,9 @@ Each individual is assigned a unique ID (8 characters, eg. "HE003187"). This ID 
 (to be added...) For a rough idea, see [Korábek et al. 2022](https://doi.org/10.3390/d14010024).
 
 ### The metadata
-(to be added...) Sometimes the package offers more precise metadata than available from GenBank or the original publication, provided from authors upon my request.
+All the metadata are provided in tabular form in the <date>Helicini_table_mol.ods file in /inst/extdata. The table contains the following columns:
 
-**ID** unique identifier of a sequenced individual
+**ID** unique identifier of a sequenced individual, provides a link to the sequences
 
 **clade**	“species-level” clade sensu Korábek et al. (2022a)
 
@@ -131,7 +148,7 @@ Only name stem is given here, which is preceded by version in the actual file na
 
 **Helicini_ND3**: *nd3*.
 
-**Helicini_TRNS2_TRNT**]: complete region between *cox3* and *nd3* alignments, only for individuals with *cox3* 3' complete and *nd3* 5' complete.
+**Helicini_TRNS2_TRNT**: complete region between *cox3* and *nd3* alignments, only for individuals with *cox3* 3' complete and *nd3* 5' complete.
 
 **Helicini_COX3**: *cox3*; only the T (A at the beginning the sequence, because it is in reverse complement as the gene is on the minus strand) preceeding the polyA tail is homologous between species, even though in some species this is followed by AA, seemingly forming a full stop codon.
 
@@ -149,15 +166,17 @@ Only name stem is given here, which is preceded by version in the actual file na
 **Helicini_table_mol**: species identifications, sampling locality data, NCBI accession numbers, shell vouchers, and other relevant metadata relating to the origin of the sequences and their use in publications; detailed explanation of columns inside the file (and above under **"The metadata"**)
 
 #### mitogenome annotations (plain text file)
-**mitogenome_annotations**: annotation of mitogenomic sequences in the GFF3 format, including the positions where the the individual alignment files align. The current annotation is indicated by "current" in the "source" field.
+**mitogenome_annotations**: annotation of mitogenomic sequences in the GFF3 format, including the positions where the the individual alignment files align. The up-to-date annotation is indicated by "current" in the "source" field.
+
+#### phylogenetic tree (plain text file)
+**tree_Helicini**: a composite ultrametric tree providing an estimate of the relationships among the individuals represented among the sequences (not all are included!). The annotation contains support values (posterior probabilities) and GPS coordinates (for internal nodes estimated with function `mean_geo`. Use the function `annotatedTreeReader` to read the tree in R (if the package is installed, type `system.file("extdata", "tree_Helicini.tre", package = "mitoHelicini")` to get the path), or FigTree.
 
 #### change log (plain text file)
 **change_log**: record of revisions of the above files, in particular of the alignment files.
 
-
 ### The functions
-The package provides a set of utilities used to curate and export the data provided with the package and some functions used for analysis of the data in published studies.
-The most important function is `representative.alignment`, which helps to export phylogenetically representative (at the level of intraspecific clades, species, or genera) or complete (all individuals) datasets, exporting a concantenate of selected loci or complete mitogenome sequences. As the data provided in the package are aligned, the exported dataset can be radily used for analyses.
+The package provides a set of utilities used to curate and export the data provided with the package and functions used to produce the tree file `tree_Helicini.tre`. The most important function is `representative.alignment`, which helps to export phylogenetically representative (at the level of intraspecific clades, species, or genera) or complete (all individuals) datasets, exporting a concantenate of selected loci or complete mitogenome sequences. As the data provided in the package are aligned, the exported dataset can be radily used for analyses.
+Use `help(function_name)` for details of each function.
 
 ### Funding
 The core of the R package was developed during my postdoc funded by scholarship from the Alexander-von-Humboldt Stiftung.
