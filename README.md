@@ -4,7 +4,7 @@
 maintained by Ondřej Korábek (Department of Zoology, Faculty of Science, Charles University, Praha, Czechia, ondrej.korabek@natur.cuni.cz)
 
 ### For the impatient
-To export an alignment ready for analysis: run `help(representative.alignment)` and then try the function with different settings. To see the whole data, go to the /inst/extdata folder or use `export.Helicini()` to copy its contents to your working directory.
+To export an alignment ready for analysis: run `help(representative.alignment)` and then try the function with different settings. To see the whole data, go to the /inst/extdata folder or use `export.Helicini()` to copy its contents into your working directory.
 
 ### The data
 #### What are Helicini?
@@ -62,8 +62,6 @@ SRA	semicolon-separated Sequence Read Archive accessions with details of the pro
 genome_acc_nos	
 reference	the study where the sequences were first reported (full references on a separate sheet “publications”)
 comments	various comments on taxonomic significance of the individual, accuracy/reliability of the geographic coordinates, source of the material, species identification, or sequence reliability separated by semicolon; “GPS only indicative” at the beginning means that coordinates were determined from locality description only (typically by someone else than the collector) or that the precision is uncertain and the sampling point may be in a broader area around that point (used inconsistently, probably too conservative for material from ZMH and HNHM collected after 2010; in the former used for material where source of coordinates was not stated as directly measured, in the latter I lost track how where they obtained for which sample).
-![image](https://github.com/user-attachments/assets/5e73f625-b549-405f-a9c8-57520e4a4728)
-
 
 ### The files
 Only name stem is given here, which is preceded by version in the actual file names.
@@ -85,20 +83,25 @@ Only name stem is given here, which is preceded by version in the actual file na
 [Helicini_TRND-TRNF] complete region between CYTB and COX2 alignments, only for individuals with CYTB 3' complete and COX2 5' complete.
 [Helicini_COX2]: COX2, mostly incomplete.
 [Helicini_TRNY-TRNL2] complete region between COX2 and ATP8 alignments, only for individuals with COX2 3' complete and ATP8 5' complete.
-[Helicini_ATP8]: ATP8.
+**Helicini_ATP8**: *atp8*.
 [Helicini_TRNN] complete region between ATP8 and ATP6 alignments, only for individuals with ATP8 3' complete and ATP6 5' complete.
-[Helicini_ATP6]: ATP6.
+**Helicini_ATP6**: *atp6*.
 [Helicini_TRNR_TRNE]: complete region between ATP6 and 12S alignments, only for individuals with ATP6 3' complete and 12S alignment 5' complete.
 [Helicini_12S_TRNM]: 12S rRNA and TRNM, mostly incomplete; the end position of the gene (5' end of the sequence here) is uncertain and therefore the TRNR_TRNE alignment probably includes part of 12S rRNA; because the 12S amplicon used in PCR-based studies extends into TRNM, TRNM is kept either up to the primer or, if complete, up to the 5' end of ND3.
 [Helicini_ND3]: ND3.
 [Helicini_TRNS2_TRNT]: complete region between COX3 and ND3 alignments, only for individuals with COX3 3' complete and ND3 5' complete.
-[Helicini_COX3]: COX3; only the T (A at the beginning the sequence, because it is in reverse complement as the gene is on the minus strand) preceeding the polyA tail is homologous between species, even though in some species this is followed by AA, seemingly forming a full stop codon.
-[Helicini_TRNS1]: complete region between ND3 and ND4 alignments, only for individuals with ND3 3' complete and ND4 5' complete; probably includes the control region in the 5' part.
-[Helicini_ND4]: ND4; it covers the whole CDS and all the nucleotides preceeding the polyA tail.
-[Helicini_TRNI]: complete region between ND4 and ND2 alignments, only for individuals with ND4 3' complete and ND2 5' complete.
-[Helicini_ND2]: ND2.
-[Helicini_TRNK]: complete region between ND2 and COX1 alignments, only for individuals with ND2 3' complete and COX1 5' complete.
-[thessalica_16S]: partial 16S sequences of Helix thessalica and H. pomatia from a study of their hybrid zone in southern Czechia (Korábek & Hausdorf 2024 Molecular Ecology).
+
+**Helicini_COX3**: *cox3*; only the T (A at the beginning the sequence, because it is in reverse complement as the gene is on the minus strand) preceeding the polyA tail is homologous between species, even though in some species this is followed by AA, seemingly forming a full stop codon.
+
+**Helicini_TRNS1**: complete region between *nd3* and *nd4* alignments, only for individuals with *nd3* 3' complete and *nd4* 5' complete; probably includes the control region in the 5' part.
+
+**Helicini_ND4**: *nd4*; it covers the whole CDS and all the nucleotides preceeding the polyA tail.
+
+**Helicini_TRNI**: complete region between *nd4* and *nd2* alignments, only for individuals with *nd4* 3' complete and *nd2* 5' complete.
+
+**Helicini_ND2**: *nd2*.
+
+**Helicini_TRNK**: complete region between *nd2* and *cox1* alignments, only for individuals with *nd2* 3' complete and *cox1* 5' complete.
 
 # sequence metadata (Open Document spread sheet)
 [Helicini_table_mol]: species identifications, sampling locality data, NCBI accession numbers, shell vouchers, and other relevant metadata relating to the origin of the sequences and their use in publications; detailed explanation of columns inside the file.
@@ -121,10 +124,14 @@ In the future, the should be a function for that. Until that materializes, write
 The core of the R package was developed during my postdoc funded by scholarship from the Alexander-von-Humboldt Stiftung.
 
 ### References (sources of the sequence data)
-Bouaziz–Yahiatene H, Pfarrer B, Medjdoub-Bensaad F, Neubert E. (2017). Revision of Massylaea Möllendorff, 1898 (Stylommatophora, Helicidae). ZooKeys 694: 109–133. 	https://doi.org/10.3897/zookeys.694.15001
-Cadahía L, Harl J, Duda M, Sattmann H, Kruckenhauser L, Fehér Z, Zopp L, Haring E. (2014). New data on the phylogeny of Ariantinae (Pulmonata, Helicidae) and the systematic position of Cylindrus obtusus based on nuclear and mitochondrial DNA marker sequences. Journal of Zoological Systematics and Evolutionary Research 52: 163–169.	https://doi.org/10.1111/jzs.12044
-Cesaroni D, De Felici S, Riccarducci G, Ciambotta M, Ventura A, Bianchi E, Sbordoni V. (2017). DNA Barcodes of the animal species occurring in Italy under the European “Habitats Directive” (92/43/EEC): a reference library for the Italian National Biodiversity Network. Biogeographia – The Journal of Integrative Biogeography 32: 5–23.	https://doi.org/10.21426/B632131365
-Dahirel M, Olivier E, Guiller A, Martin M–C, Madec L, Ansart A. (2015). Movement propensity and ability correlate with ecological specialization in European land snails: comparative analysis of a dispersal syndrome. Journal of Animal Ecology 84: 228–238.	https://doi.org/10.1111/1365-2656.12276
+Bouaziz–Yahiatene H, Pfarrer B, Medjdoub-Bensaad F, Neubert E. (2017). Revision of *Massylaea* Möllendorff, 1898 (Stylommatophora, Helicidae). *ZooKeys* 694: 109–133. https://doi.org/10.3897/zookeys.694.15001
+
+Cadahía L, Harl J, Duda M, Sattmann H, Kruckenhauser L, Fehér Z, Zopp L, Haring E. (2014). New data on the phylogeny of Ariantinae (Pulmonata, Helicidae) and the systematic position of *Cylindrus obtusus* based on nuclear and mitochondrial DNA marker sequences. *Journal of Zoological Systematics and Evolutionary Research* 52: 163–169. https://doi.org/10.1111/jzs.12044
+
+Cesaroni D, De Felici S, Riccarducci G, Ciambotta M, Ventura A, Bianchi E, Sbordoni V. (2017). DNA Barcodes of the animal species occurring in Italy under the European “Habitats Directive” (92/43/EEC): a reference library for the Italian National Biodiversity Network. *Biogeographia – The Journal of Integrative Biogeography* 32: 5–23. https://doi.org/10.21426/B632131365
+
+Dahirel M, Olivier E, Guiller A, Martin M–C, Madec L, Ansart A. (2015). Movement propensity and ability correlate with ecological specialization in European land snails: comparative analysis of a dispersal syndrome. *Journal of Animal Ecology* 84: 228–238. https://doi.org/10.1111/1365-2656.12276
+
 Dimzas D, Morelli S, Traversa D, Di Cesare A, Van Bourgonie YR, Breugelmans K, Backeljau T, Frangipane di Regalbono A, Diakou A. (2020). Intermediate gastropod hosts of major feline cardiopulmonary nematodes in an area of wildcat and domestic cat sympatry in Greece. Parasites & Vectors 13: 345.	https://doi.org/10.1186/s13071-020-04213-z
 Fiorentino V, Manganelli G, Giusti F, Ketmaier V. (2016). Recent expansion and relic survival: Phylogeography of the land snail genus Helix (Mollusca, Gastropoda) from south to north Europe. Molecular Phylogenetics and Evolution 98: 358–372.	https://doi.org/10.1016/j.ympev.2016.02.017
 Gittenberger E, Piel WH, Groenenberg DSJ. (2004). The Pleistocene glaciations and the evolutionary history of the polytypic snail species Arianta arbustorum (Gastropoda, Pulmonata, Helicidae). Molecular Phylogenetics and Evolution 30: 64–73.	https://doi.org/10.1016/S1055-7903(03)00182-9
@@ -156,15 +163,21 @@ Neiber MT, Hausdorf B. (2015). Molecular phylogeny reveals the polyphyly of the 
 Neiber MT, Sagorny C, Hausdorf B. (2016a). Increasing the number of molecular markers resolves the phylogenetic relationship of ‘Cepaea’ vindobonensis (Pfeiffer 1828) with Caucasotachea Boettger 1909 (Gastropoda: Pulmonata: Helicidae). Journal of Zoological Systematics and Evolutionary Research 54: 40–45.	https://doi.org/10.1111/jzs.12116
 Neiber MT, Sagorny C, Sauer J, Walther F, Hausdorf B. (2016b). Phylogeographic analyses reveal Transpontic long distance dispersal in land snails belonging to the Caucasotachea atrolabiata complex (Gastropoda: Helicidae). Molecular Phylogenetics and Evolution 103: 172–183.	https://doi.org/10.1016/j.ympev.2016.07.017
 Neiber MT, Korábek O, Glaubrecht M, Hausdorf B. (2022). A misinterpreted disjunction: the phylogenetic relationships of the Libyan land snail Gyrostomella (Gastropoda: Stylommatophora: Helicidae). Zoological Journal of the Linnean Society 194: 1236–1251.	https://doi.org/10.1093/zoolinnean/zlab059
-Parmakelis A, Kotsakiozi P, Rand D. (2013). Animal mitochondria, positive selection and cyto-nuclear coevolution: insights from Pulmonates. PLoS ONE 8: e61970. 	https://doi.org/10.1371/journal.pone.0061970
-Petraccioli A, Niero A, Carandente F, Crovato P, de Vico G, Odierna G, Picariello OLA, Tardy E, Viglietti S, Guarino FM, Maio N. (2021). Helix straminea Briganti, 1825 in Italy (Gastropoda: Pulmonata): taxonomic history, morphology, biology, distribution and phylogeny. The European Zoological Journal 88: 390–416.	https://doi.org/10.1080/24750263.2021.1892217
-Petraccioli A, Crovato P, Guarino FM, Mezzasalma M, Odierna G, Picariello O, Maio N. (2021). Chromosome diversity and evolution in Helicoidea (Gastropoda: Stylommatophora): A synthesis from original and literature data. Animals 11: 2551.	https://doi.org/10.3390/ani11092551
-Psonis N, Vardinoyannis K, Mylonas M, Poulakakis N. (2015). Evaluation of the taxonomy of Helix cincta (Muller, 1774) and Helix nucula (Mousson, 1854); insights using mitochondrial DNA sequence data. Journal of Natural History 49: 383–392.	https://doi.org/10.1080/00222933.2013.825023
-Psonis N, Vardinoyannis K, Poulakakis N. (2022). High-throughput degraded DNA sequencing of subfossil shells of a critically endangered stenoendemic land snail in the Aegean. Molecular Phylogenetics and Evolution 175: 107561. 	https://doi.org/10.1016/j.ympev.2022.107561
-Razkin O, Gómez-Moliner BJ, Prieto CE, Martínez-Ortí A, Arrébola JR, Muñoz B, Chueca LJ, Madeira MJ. (2015). Molecular phylogeny of the western Palaearctic Helicoidea (Gastropoda, Stylommatophora). Molecular Phylogenetics and Evolution 83: 99–117.	https://doi.org/10.1016/j.ympev.2014.11.014
-Schmera D, Pizá J, Reinartz E, Ursenbacher S, Baur B. (2016). Breeding system, shell size and age at sexual maturity affect sperm length in stylommatophoran gastropods. BMC Evolutionary Biology 16: 89.	https://doi.org/10.1186/s12862-016-0661-9
-Sei M, Robinson DG, Geneva AJ, Rosenberg G. (2017). Doubled helix: Sagdoidea is the overlooked sister group of Helicoidea (Mollusca: Gastropoda: Pulmonata). Biological Journal of the Linnean Society 122: 697–728.	https://doi.org/10.1093/biolinnean/blx082
-Zając KS, Turek J, Boroń A. (2023). Helix lucorum Linnaeus, 1758 (Gastropoda: Helicidae) – the morphological and molecular analysis of a new species to the Polish malacofauna. Folia Biologica (Kraków) 71: 137–145.	https://doi.org/10.3409/fb_71-3.14
-![image](https://github.com/user-attachments/assets/133e03cf-3ef7-4cac-ba99-429ccfb5f14a)
 
+Parmakelis A, Kotsakiozi P, Rand D. (2013). Animal mitochondria, positive selection and cyto-nuclear coevolution: insights from Pulmonates. *PLoS ONE* 8: e61970. https://doi.org/10.1371/journal.pone.0061970
 
+Petraccioli A, Niero A, Carandente F, Crovato P, de Vico G, Odierna G, Picariello OLA, Tardy E, Viglietti S, Guarino FM, Maio N. (2021). *Helix straminea* Briganti, 1825 in Italy (Gastropoda: Pulmonata): taxonomic history, morphology, biology, distribution and phylogeny. *The European Zoological Journal* 88: 390–416. https://doi.org/10.1080/24750263.2021.1892217
+
+Petraccioli A, Crovato P, Guarino FM, Mezzasalma M, Odierna G, Picariello O, Maio N. (2021). Chromosome diversity and evolution in Helicoidea (Gastropoda: Stylommatophora): A synthesis from original and literature data. *Animals* 11: 2551. https://doi.org/10.3390/ani11092551
+
+Psonis N, Vardinoyannis K, Mylonas M, Poulakakis N. (2015). Evaluation of the taxonomy of *Helix cincta* (Muller, 1774) and *Helix nucula* (Mousson, 1854); insights using mitochondrial DNA sequence data. *Journal of Natural History* 49: 383–392. https://doi.org/10.1080/00222933.2013.825023
+
+Psonis N, Vardinoyannis K, Poulakakis N. (2022). High-throughput degraded DNA sequencing of subfossil shells of a critically endangered stenoendemic land snail in the Aegean. *Molecular Phylogenetics and Evolution* 175: 107561. https://doi.org/10.1016/j.ympev.2022.107561
+
+Razkin O, Gómez-Moliner BJ, Prieto CE, Martínez-Ortí A, Arrébola JR, Muñoz B, Chueca LJ, Madeira MJ. (2015). Molecular phylogeny of the western Palaearctic Helicoidea (Gastropoda, Stylommatophora). *Molecular Phylogenetics and Evolution* 83: 99–117. https://doi.org/10.1016/j.ympev.2014.11.014
+
+Schmera D, Pizá J, Reinartz E, Ursenbacher S, Baur B. (2016). Breeding system, shell size and age at sexual maturity affect sperm length in stylommatophoran gastropods. *BMC Evolutionary Biology* 16: 89. https://doi.org/10.1186/s12862-016-0661-9
+
+Sei M, Robinson DG, Geneva AJ, Rosenberg G. (2017). Doubled helix: Sagdoidea is the overlooked sister group of Helicoidea (Mollusca: Gastropoda: Pulmonata). *Biological Journal of the Linnean Society* 122: 697–728.	https://doi.org/10.1093/biolinnean/blx082
+
+Zając KS, Turek J, Boroń A. (2023). *Helix lucorum* Linnaeus, 1758 (Gastropoda: Helicidae) – the morphological and molecular analysis of a new species to the Polish malacofauna. *Folia Biologica (Kraków)* 71: 137–145.	https://doi.org/10.3409/fb_71-3.14
