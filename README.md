@@ -145,13 +145,13 @@ Only name stem is given here, which is preceded by version in the actual file na
 
 **Helicini_TRNK**: complete region between *nd2* and *cox1* alignments, only for individuals with *nd2* 3' complete and *cox1* 5' complete.
 
-# sequence metadata (Open Document spread sheet)
+#### sequence metadata (Open Document spread sheet)
 **Helicini_table_mol**: species identifications, sampling locality data, NCBI accession numbers, shell vouchers, and other relevant metadata relating to the origin of the sequences and their use in publications; detailed explanation of columns inside the file (and above under **"The metadata"**)
 
-# mitogenome annotations (plain text file)
+#### mitogenome annotations (plain text file)
 **mitogenome_annotations**: annotation of mitogenomic sequences in the GFF3 format, including the positions where the the individual alignment files align. The current annotation is indicated by "current" in the "source" field.
 
-# change log (plain text file)
+#### change log (plain text file)
 **change_log**: record of revisions of the above files, in particular of the alignment files.
 
 
