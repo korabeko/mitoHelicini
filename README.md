@@ -76,20 +76,33 @@ Only name stem is given here, which is preceded by version in the actual file na
 
 **Helicini_ND6**: *nd6*; gene ends with a T preceding the polyA tail even where this T follows after a complete stop codon.
 
-**Helicini_TRNP**: complete region between *nd6* and *nd5* alignments, only for individuals with ND6 3' complete and ND5 5' complete
-[Helicini_ND5]: ND5; ends always with a full stop codon, because ND1 and ND4L are also translated from the same transcript.
-[Helicini_ND1_ND4L]: ND1 and ND4L; ND1 is incomplete at the 5' end due to overlap with the preceding ND5; the stop codon of ND1 usually overlaps the start codon of ND4L; would include also any nucleotides between ND4L and CYTB.
-[Helicini_CYTB]: CYTB, mostly incomplete.
-[Helicini_TRND-TRNF] complete region between CYTB and COX2 alignments, only for individuals with CYTB 3' complete and COX2 5' complete.
-[Helicini_COX2]: COX2, mostly incomplete.
-[Helicini_TRNY-TRNL2] complete region between COX2 and ATP8 alignments, only for individuals with COX2 3' complete and ATP8 5' complete.
+**Helicini_TRNP**: complete region between *nd6* and *nd5* alignments, only for individuals with *nd6* 3' complete and *nd5* 5' complete
+
+**Helicini_ND5**: *nd5*; ends always with a full stop codon, because *nd1* and *nd4L* are also translated from the same transcript.
+
+**Helicini_ND1_ND4L**: *nd1* and *nd4L*; *nd1* is incomplete at the 5' end due to overlap with the preceding *nd5*; the start codon of *nd4L* usually overlaps the stop codon of *nd1*; would include also any nucleotides between *nd4L* and *cytb*.
+
+**Helicini_CYTB**: *cytb*, mostly incomplete.
+
+**Helicini_TRND-TRNF**: complete region between *cytb* and *cox2* alignments, only for individuals with *cytb* 3' complete and *cox2* 5' complete.
+
+**Helicini_COX2**: COX2, mostly incomplete.
+
+**Helicini_TRNY-TRNL2**: complete region between *cox2* and *atp8* alignments, only for individuals with *cox2* 3' complete and *atp8* 5' complete.
+
 **Helicini_ATP8**: *atp8*.
-[Helicini_TRNN] complete region between ATP8 and ATP6 alignments, only for individuals with ATP8 3' complete and ATP6 5' complete.
+
+**Helicini_TRNN** complete region between *atp8* and *atp6* alignments, only for individuals with *atp8* 3' complete and *atp6* 5' complete.
+
 **Helicini_ATP6**: *atp6*.
-[Helicini_TRNR_TRNE]: complete region between ATP6 and 12S alignments, only for individuals with ATP6 3' complete and 12S alignment 5' complete.
-[Helicini_12S_TRNM]: 12S rRNA and TRNM, mostly incomplete; the end position of the gene (5' end of the sequence here) is uncertain and therefore the TRNR_TRNE alignment probably includes part of 12S rRNA; because the 12S amplicon used in PCR-based studies extends into TRNM, TRNM is kept either up to the primer or, if complete, up to the 5' end of ND3.
-[Helicini_ND3]: ND3.
-[Helicini_TRNS2_TRNT]: complete region between COX3 and ND3 alignments, only for individuals with COX3 3' complete and ND3 5' complete.
+
+**Helicini_TRNR_TRNE**: complete region between *atp6* and *rrnS* alignments, only for individuals with *atp6* 3' complete and *rrnS* alignment 5' complete.
+
+**Helicini_12S_TRNM**: *rrnS* and *trnM*, mostly incomplete; the end position of the *rrnS* gene (5' end of the sequence here) is uncertain and therefore the TRNR_TRNE alignment file possibly includes part of *rrnS*; because the *rrnS* amplicon used in PCR-based studies extends into *trnM*, *trnM* is kept either up to the primer or, if complete, up to the 5' end of *nd3*.
+
+**Helicini_ND3**: *nd3*.
+
+**Helicini_TRNS2_TRNT**]: complete region between *cox3* and *nd3* alignments, only for individuals with *cox3* 3' complete and *nd3* 5' complete.
 
 **Helicini_COX3**: *cox3*; only the T (A at the beginning the sequence, because it is in reverse complement as the gene is on the minus strand) preceeding the polyA tail is homologous between species, even though in some species this is followed by AA, seemingly forming a full stop codon.
 
