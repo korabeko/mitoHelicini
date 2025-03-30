@@ -179,7 +179,7 @@ The package provides a set of utilities used to curate and export the data provi
 Use `help(function_name)` for details of each function.
 
 ### Acknowledgements
-The function `annotatedTreeReader` was written by Marc A. Suchard and originates from a no-longer maintained package "OutbreakTools" (Jombart et al. 2014). It was used in updated form also in later packages (https://www.repidemicsconsortium.org/projects/).
+The function `annotatedTreeReader` was written by Marc A. Suchard and originates from a no-longer maintained package "OutbreakTools" (Jombart et al. 2014).
 
 The function `write_supertree` is a modification of a function `write.tree` from the package `ape` by Emmanuel Paradis, Daniel Lawson, and Klaus Schliep. 
 
