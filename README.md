@@ -238,13 +238,13 @@ Korábek O, Adamcová T, Proćków M, Petrusek A, Hausdorf B, Juřičková L. (2
 
 Korábek O, Balashov I, Neiber MT, Walther F, Hausdorf B. (2023b). The Caucasus is neither a cradle nor a museum of diversity of the land snail genus *Helix* (Gastropoda, Stylommatophora, Helicidae), while Crimea is home to an ancient lineage. *Zoosystematics and Evolution* 99: 535–543. https://doi.org/10.3897/zse.99.110610
 
-Korábek O, Hausdorf B. (2023c). Unravelling the double *Helix escherichi*, *with description of *Helix ankae* sp. nov. and a discussion of Maltzanella and the subgenera of Helix (Gastropoda: Helicidae). *Archiv für Molluskenkunde* 152: 239–256. https://doi.org/10.1127/arch.moll/152/239-256
+Korábek O, Hausdorf B. (2023c). Unravelling the double *Helix escherichi*, with description of *Helix ankae* sp. nov. and a discussion of *Maltzanella* and the subgenera of *Helix* (Gastropoda: Helicidae). *Archiv für Molluskenkunde* 152: 239–256. https://doi.org/10.1127/arch.moll/152/239-256
 
 Korábek O, Hausdorf B. (2024). Accelerated mitochondrial evolution and asymmetric viability of hybrids contribute to the persistence of *Helix thessalica* in the *Helix pomatia* range. *Molecular Ecology* 33: e17474. https://doi.org/10.1111/mec.17474
 
-Korábek O, Dolejš P, Coufal R, Juřičková L, Kubíková K, Hausdorf B. (2025). ﻿A new distinctive lineage of Helix (Gastropoda, Stylommatophora, Helicidae), with a guide to *Helix* species from mainland Greece. *ZooKeys* 1249: 93–135. https://doi.org/10.3897/zookeys.1249.143635
+Korábek O, Dolejš P, Coufal R, Juřičková L, Kubíková K, Hausdorf B. (2025). ﻿A new distinctive lineage of *Helix* (Gastropoda, Stylommatophora, Helicidae), with a guide to *Helix* species from mainland Greece. *ZooKeys* 1249: 93–135. https://doi.org/10.3897/zookeys.1249.143635
 
-Korábek O*, Hausdorf B. (2026). Multilocus phylogeny of the land snail *Helix* differs substantially from the mitochondrial gene tree. *Molecular Phylogenetics and Evolution* xxx: 108516. https://doi.org/10.1016/j.ympev.2025.108516
+Korábek O*, Hausdorf B. (2026). Multilocus phylogeny of the land snail *Helix* differs substantially from the mitochondrial gene tree. *Molecular Phylogenetics and Evolution* **xxx**: 108516. https://doi.org/10.1016/j.ympev.2025.108516
 
 Kotsakiozi P, Parmakelis A, Giokas S, Papanikolaou I, Valakos ED. (2012). Mitochondrial phylogeny and biogeographic history of the Greek endemic land-snail genus *Codringtonia* Kobelt 1898 (Gastropoda, Pulmonata, Helicidae). *Molecular Phylogenetics and Evolution* 62: 681–692. https://doi.org/10.1016/j.ympev.2011.11.012
 
