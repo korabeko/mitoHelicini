@@ -75,7 +75,7 @@ All the metadata are provided in tabular form in the first sheet of the <date>He
 
 **latitude** northern latitude in degrees, WGS84 datum (negative values south of equator); number of decimal positions roughly reflects the precision of the geographic coordinates
 
-**longitude**	eastern longitude in degrees, WGS84 datum (negative values south of equator); number of decimal positions roughly reflects the precision of the geographic coordinates
+**longitude**	eastern longitude in degrees, WGS84 datum (negative values west of the prime meridian); number of decimal positions roughly reflects the precision of the geographic coordinates
 
 **native** does the sample come from within the natural range of the species (Y=yes, N=No, U=unknown/uncertain; see Korábek et al. 2022a for details)
 
