@@ -50,7 +50,7 @@ Contents of each alignment file are described below. File names begin with the d
 #### How are the sequences linked to metadata?
 Each individual is assigned a unique ID (8 characters, eg. "HE003187"). This ID appears at the beginning of the fasta header of each sequence. It may be followed by another identifier separated by "_" (isolate lab code for original data, GenBank accession number for downloaded data - accession of one gene is usually used for all genes from the same individual - and "barcode" if from a barcoding dataset not available from GenBank), species name (may be obsolete, the names are not consistently updated in the fasta files), country (two-letter ISO code), and locality name (for internal use, not standardized). The ID stands for an individual snail, so it is identical between alignment files where the sequences come from the same snail. The ID provides a link between the sequences and the metadata.
 #### How were the sequences aligned?
-(to be added...) For a rough idea, see [Korábek et al. 2022](https://doi.org/10.3390/d14010024).
+(...yet to be added...) For a rough idea, see [Korábek et al. 2022](https://doi.org/10.3390/d14010024).
 
 ### The metadata
 All the metadata are provided in tabular form in the first sheet of the <date>Helicini_table_mol.ods file in /inst/extdata. The table contains the following columns:
@@ -63,13 +63,13 @@ All the metadata are provided in tabular form in the first sheet of the <date>He
 
 **genus**	genus
 
-**species**	species; slash indicates intermediate or hybrid individuals
+**species**	species; slash indicates morphologically intermediate or hybrid individuals
 
-**identified_by** author of the species-level identification, only the latest revision is given ("authors" indicates that identification comes from the study/database cited as source of the data)
+**identified_by** author of the species-level identification, only the latest revision is given ("authors" indicates that identification comes from the study/database cited as the source of the data)
 
 **date_identified** year of identification to species, only the latest revision is given
 
-**basis_for_identification** observations considered for species identification (shell=conchological characters, mtDNA=membership to a mitochondrial lineage, genital=characters on the genital system, origin=the geographic provenance of the sample, SNPs=multilocus data (for methods see the respective publication, for *H. thessalica*/*pomatia* 2024 study 90% cluster membership from STRUCTURE at K=2 was used))
+**basis_for_identification** observations considered for species identification (shell = conchological characters, mtDNA = membership to a mitochondrial lineage, genital = characters on the genital system, origin = the geographic provenance of the sample, SNPs = multilocus data (for methods see the respective publication, for *H. thessalica*/*pomatia* 2024 study 90% cluster membership from STRUCTURE at K=2 was used))
 
 **locality** description of the location of the sampling site
 
@@ -83,7 +83,7 @@ All the metadata are provided in tabular form in the first sheet of the <date>He
 
 **date_of_collection** when was the sample collected in the field
 
-**shells_deposited_in**	acronym of the institution or collection, where the shells are deposited (include any shells of the same species collected at the same site on the same occasion, not only the sequenced individual); collection acronyms are listed on a separate sheet “collection_acronyms”; please, contact me if you need information regarding the tissue/DNA vouchers.
+**shells_deposited_in**	acronym of the institution or collection, where the shells are deposited (include any shells of the same species collected at the same site on the same occasion, not only and not always the sequenced individual); collection acronyms are listed on a separate sheet “collection_acronyms”; please, contact me if you need information regarding the tissue/DNA vouchers.
 
 **collection_number**	catalogue number, under which the shells are registered in the collection
 
@@ -101,11 +101,11 @@ All the metadata are provided in tabular form in the first sheet of the <date>He
 
 **other_genes** semicolon-separated GenBank accessions for other mitochondrial genes/regions (specified in [] as cox1, rrnL, trnS2, etc.)
 
-**genome_acc_nos** GenBank accession for a complete mitogenome
+**genome_acc_nos** GenBank accession for a complete or partial mitogenome sequence(s)
 
 **SRA**	semicolon-separated Sequence Read Archive accessions with character of the data stated (specified in [] as ddRAD, WGS, RNAseq, etc.)
 
-**reference**	the study where the sequences were first reported (full references on a separate sheet “publications”)
+**reference**	the study where the sequences were first reported (full references on a separate sheet “publications”), semicolon-separated
 
 **comments**	various comments on nomenclatoric significance of the individual, accuracy/reliability of the geographic coordinates, source of the material, species identification, or sequence reliability separated by semicolon; “GPS only indicative” at the beginning means that coordinates were determined from locality description only (typically by someone else than the collector) or that the precision is uncertain and the sampling point may be in a broader area around that point (used inconsistently, probably too conservative for material from ZMH and HNHM collected after 2010; in the former used for material where source of coordinates was not stated as directly measured, in the latter I lost track how where they obtained for which sample).
 
@@ -118,58 +118,58 @@ Only name stem is given here, which is preceded by version in the actual file na
 
 **Helicini_16S**: *rrnL*; because the exact start of the gene us uncertain, all nucleotides after *trnV* are included.
 
-**Helicini_TRNL1_TRNA**: complete region between *rrnL* and *nd6* alignments, only for individuals with *rrnL* 3' complete and *nd6* 5' complete.
+**Helicini_TRNL1_TRNA**: complete region between *rrnL* and *nd6* alignments, only for individuals with *rrnL* 3'-complete and *nd6* 5'-complete.
 
 **Helicini_ND6**: *nd6*; gene ends with a T preceding the polyA tail even where this T follows after a complete stop codon.
 
-**Helicini_TRNP**: complete region between *nd6* and *nd5* alignments, only for individuals with *nd6* 3' complete and *nd5* 5' complete
+**Helicini_TRNP**: complete region between *nd6* and *nd5* alignments, only for individuals with *nd6* 3'-complete and *nd5* 5'- complete
 
 **Helicini_ND5**: *nd5*; ends always with a full stop codon, because *nd1* and *nd4L* are also translated from the same transcript.
 
-**Helicini_ND1_ND4L**: *nd1* and *nd4L*; *nd1* is incomplete at the 5' end due to overlap with the preceding *nd5*; the start codon of *nd4L* usually overlaps the stop codon of *nd1*; would include also any nucleotides between *nd4L* and *cytb*.
+**Helicini_ND1_ND4L**: *nd1* and *nd4L*; *nd1* is incomplete at the 5' end due to overlap with the preceding *nd5*; the start codon of *nd4L* usually overlaps the stop codon of *nd1*; the file would include also any nucleotides between *nd4L* and *cytb*.
 
 **Helicini_CYTB**: *cytb*, mostly incomplete.
 
-**Helicini_TRND-TRNF**: complete region between *cytb* and *cox2* alignments, only for individuals with *cytb* 3' complete and *cox2* 5' complete.
+**Helicini_TRND-TRNF**: complete region between *cytb* and *cox2* alignments, only for individuals with *cytb* 3'-complete and *cox2* 5'-complete.
 
 **Helicini_COX2**: COX2, mostly incomplete.
 
-**Helicini_TRNY-TRNL2**: complete region between *cox2* and *atp8* alignments, only for individuals with *cox2* 3' complete and *atp8* 5' complete.
+**Helicini_TRNY-TRNL2**: complete region between *cox2* and *atp8* alignments, only for individuals with *cox2* 3'-complete and *atp8* 5'-complete.
 
 **Helicini_ATP8**: *atp8*.
 
-**Helicini_TRNN** complete region between *atp8* and *atp6* alignments, only for individuals with *atp8* 3' complete and *atp6* 5' complete.
+**Helicini_TRNN** complete region between *atp8* and *atp6* alignments, only for individuals with *atp8* 3'-complete and *atp6* 5'-complete.
 
 **Helicini_ATP6**: *atp6*.
 
-**Helicini_TRNR_TRNE**: complete region between *atp6* and *rrnS* alignments, only for individuals with *atp6* 3' complete and *rrnS* alignment 5' complete.
+**Helicini_TRNR_TRNE**: complete region between *atp6* and *rrnS* alignments, only for individuals with *atp6* 3'-complete and *rrnS* alignment 5'-complete.
 
 **Helicini_12S_TRNM**: *rrnS* and *trnM*, mostly incomplete; the end position of the *rrnS* gene (5' end of the sequence here) is uncertain and therefore the TRNR_TRNE alignment file possibly includes part of *rrnS*; because the *rrnS* amplicon used in PCR-based studies extends into *trnM*, *trnM* is kept either up to the primer or, if complete, up to the 5' end of *nd3*.
 
 **Helicini_ND3**: *nd3*.
 
-**Helicini_TRNS2_TRNT**: complete region between *cox3* and *nd3* alignments, only for individuals with *cox3* 3' complete and *nd3* 5' complete.
+**Helicini_TRNS2_TRNT**: complete region between *cox3* and *nd3* alignments, only for individuals with *cox3* 3'-complete and *nd3* 5'-complete.
 
 **Helicini_COX3**: *cox3*; only the T (A at the beginning the sequence, because it is in reverse complement as the gene is on the minus strand) preceeding the polyA tail is homologous between species, even though in some species this is followed by AA, seemingly forming a full stop codon.
 
-**Helicini_TRNS1**: complete region between *nd3* and *nd4* alignments, only for individuals with *nd3* 3' complete and *nd4* 5' complete; probably includes the control region in the 5' part.
+**Helicini_TRNS1**: complete region between *nd3* and *nd4* alignments, only for individuals with *nd3* 3'-complete and *nd4* 5'-complete; probably includes the control region in the 5' part.
 
 **Helicini_ND4**: *nd4*; it covers the whole CDS and all the nucleotides preceeding the polyA tail.
 
-**Helicini_TRNI**: complete region between *nd4* and *nd2* alignments, only for individuals with *nd4* 3' complete and *nd2* 5' complete.
+**Helicini_TRNI**: complete region between *nd4* and *nd2* alignments, only for individuals with *nd4* 3'-complete and *nd2* 5'-complete.
 
 **Helicini_ND2**: *nd2*.
 
-**Helicini_TRNK**: complete region between *nd2* and *cox1* alignments, only for individuals with *nd2* 3' complete and *cox1* 5' complete.
+**Helicini_TRNK**: complete region between *nd2* and *cox1* alignments, only for individuals with *nd2* 3'-complete and *cox1* 5'-complete.
 
 #### sequence metadata (Open Document spread sheet)
-**Helicini_table_mol**: species identifications, sampling locality data, NCBI accession numbers, shell vouchers, and other relevant metadata relating to the origin of the sequences and their use in publications; detailed explanation of columns inside the file (and above under **"The metadata"**)
+**Helicini_table_mol**: species identifications, sampling locality data, NCBI accession numbers, shell vouchers, and other relevant metadata relating to the origin of the sequences and their use in publications; detailed explanation of columns inside the file on additional sheets (and above under **"The metadata"**)
 
 #### mitogenome annotations (plain text file)
 **mitogenome_annotations**: annotation of mitogenomic sequences in the GFF3 format, including the positions where the the individual alignment files align. The up-to-date annotation is indicated by "current" in the "source" field.
 
 #### phylogenetic tree (plain text file)
-**tree_Helicini**: a composite ultrametric tree providing an estimate of the relationships among the individuals represented among the sequences (not all are included!). The annotation contains support values (posterior probabilities) and GPS coordinates (for internal nodes estimated with function `mean_geo`. Use the function `annotatedTreeReader` to read the tree in R (if the package is installed, type `system.file("extdata", "tree_Helicini.tre", package = "mitoHelicini")` to get the path), or FigTree.
+**tree_Helicini**: a composite ultrametric tree providing an estimate of the relationships among the individuals represented among the sequences (not all are included!). The annotation contains support values (posterior probabilities) and GPS coordinates (for internal nodes estimated as described in ...yet to be added...). Use the function `annotatedTreeReader` to read the tree in R (if the package is installed, type `system.file("extdata", "tree_Helicini.tre", package = "mitoHelicini")` to get the path), or FigTree.
 
 #### change log (plain text file)
 **change_log**: record of revisions of the above files, in particular of the alignment files.
@@ -241,6 +241,10 @@ Korábek O, Balashov I, Neiber MT, Walther F, Hausdorf B. (2023b). The Caucasus 
 Korábek O, Hausdorf B. (2023c). Unravelling the double *Helix escherichi*, *with description of *Helix ankae* sp. nov. and a discussion of Maltzanella and the subgenera of Helix (Gastropoda: Helicidae). *Archiv für Molluskenkunde* 152: 239–256. https://doi.org/10.1127/arch.moll/152/239-256
 
 Korábek O, Hausdorf B. (2024). Accelerated mitochondrial evolution and asymmetric viability of hybrids contribute to the persistence of *Helix thessalica* in the *Helix pomatia* range. *Molecular Ecology* 33: e17474. https://doi.org/10.1111/mec.17474
+
+Korábek O, Dolejš P, Coufal R, Juřičková L, Kubíková K, Hausdorf B. (2025). ﻿A new distinctive lineage of Helix (Gastropoda, Stylommatophora, Helicidae), with a guide to *Helix* species from mainland Greece. *ZooKeys* 1249: 93–135. https://doi.org/10.3897/zookeys.1249.143635
+
+Korábek O*, Hausdorf B. (2026). Multilocus phylogeny of the land snail *Helix* differs substantially from the mitochondrial gene tree. *Molecular Phylogenetics and Evolution* xxx: 108516. https://doi.org/10.1016/j.ympev.2025.108516
 
 Kotsakiozi P, Parmakelis A, Giokas S, Papanikolaou I, Valakos ED. (2012). Mitochondrial phylogeny and biogeographic history of the Greek endemic land-snail genus *Codringtonia* Kobelt 1898 (Gastropoda, Pulmonata, Helicidae). *Molecular Phylogenetics and Evolution* 62: 681–692. https://doi.org/10.1016/j.ympev.2011.11.012
 
