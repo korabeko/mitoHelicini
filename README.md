@@ -169,7 +169,7 @@ Only name stem is given here, which is preceded by version in the actual file na
 **mitogenome_annotations**: annotation of mitogenomic sequences in the GFF3 format, including the positions where the the individual alignment files align. The up-to-date annotation is indicated by "current" in the "source" field.
 
 #### phylogenetic tree (plain text file)
-**tree_Helicini**: a composite ultrametric tree providing an estimate of the relationships among the individuals represented among the sequences (not all are included!). The annotation contains support values (posterior probabilities) and GPS coordinates (for internal nodes estimated as described in ...yet to be added...). Use the function `annotatedTreeReader` to read the tree in R (if the package is installed, type `system.file("extdata", "tree_Helicini.tre", package = "mitoHelicini")` to get the path), or FigTree.
+**tree_Helicini**: a composite ultrametric tree providing an estimate of the relationships among the individuals represented among the sequences (not all are included!). The annotation contains support values (posterior probabilities) and GPS coordinates (for internal nodes estimated as described in ...yet to be added...). Use the function `annotatedTreeReader` to read the tree in R (if the package is installed, type `system.file("extdata", "tree_Helicini.nex", package = "mitoHelicini")` to get the path), or FigTree.
 
 #### change log (plain text file)
 **change_log**: record of revisions of the above files, in particular of the alignment files.
