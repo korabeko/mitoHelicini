@@ -27,6 +27,8 @@ load_all()
 To export an alignment ready for analysis: run `help(representative.alignment)` and then try the function with different settings. To see the whole data, go to the /inst/extdata folder or use `export.Helicini()` to copy its contents into your working directory.
 
 ### The data
+#### Why and R package?
+I write the package as a way how keep the data organized while being able to operatively update and re-align parts of it as new sequences become available and to quickly subsample it for different purposes. It is clumsy but it worked for me, so maybe it will help somebody else to get into Helicini (and Helicida in general), because it is a fascinating group of snails.
 #### What are Helicini?
 The tribe [Helicini](https://en.wikipedia.org/wiki/Helicini) Rafinesque, 1815 is a clade of land snails from the Western Palearctic (Gastropoda: Heterobranchia: Pneumopulmonata: Stylommatophora: Helicidae: Helicini). It comprises 10 genera of large snails (shell diameter ~2-6 cm). The most diverse genus is [*Helix*](https://en.wikipedia.org/wiki/Helix_(gastropod)) Linnaeus, 1758, which includes [*Helix pomatia*](https://en.wikipedia.org/wiki/Helix_pomatia) Linnaeus, 1758, one of the best studied land snail species.
 #### What data are included?
