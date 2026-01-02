@@ -38,7 +38,7 @@ The sequences are provided with complete metadata (locality, date of collection,
 #### Do you want to contribute a sequence?
 If you have mitochondrial sequences of any Helicini species in your drawer that you will no more use for a publication, it would be a waste to keep them hidden until discarded. Send me an e-mail and they may be incorporated here.
 #### How do the data relate to records in public databases?
-As detailed in [Korábek et al. (2022)](https://doi.org/10.3390/d14010024), some of the sequences dowloaded from GenBank were edited (usually remains of primers or sequence ends suspected to be of a flow quality were trimmed, some positions with suspicious substitutions have been changed to ambiguity codes). In case of sequences submitted to GenBank by me, the version deposited in GenBank may in some cases be shorter than the currently available sequence or they may be minor differences in the sequences. Updating GenBank records is a tedious and inflexible process. They sometimes do weird things there, like renaming sequences of *Helix straminea* as *Bradybaena straminea*... Also, the submission process may lead to errors. It is therefore strongly recommended to use the latest version of sequence as provided here; the user may check which sequences differ from the GenBank record using the R function `GB.compare`. Finally, there are also sequences that were not yet submitted to GenBank; they may be identified with the function `which.submit`. This pacakage thus provides collated, curated, and more up-to-date data with more accurate taxonomy than you can get from GenBank.
+As detailed in [Korábek et al. (2022)](https://doi.org/10.3390/d14010024), some of the sequences dowloaded from GenBank were edited (usually remains of primers or sequence ends suspected to be of a flow quality were trimmed, some positions with suspicious substitutions have been changed to ambiguity codes). In case of sequences submitted to GenBank by me, the version deposited in GenBank may in some cases be shorter than the currently available sequence or they may be minor differences in the sequences. Updating GenBank records is a tedious and inflexible process. They sometimes do weird things there, like renaming sequences of *Helix straminea* as *Bradybaena straminea*... Also, the submission process may lead to errors. It is therefore strongly recommended to use the latest version of sequence as provided here; the user may check which sequences differ from the GenBank record using the R function `GB.compare` **[comming soon]**. Finally, there are also sequences that were not yet submitted to GenBank. This pacakage thus provides collated, curated, and more up-to-date data with more accurate taxonomy than you can get from GenBank.
 
 Not all Helicini sequences from GenBank were incorporated. Some were ommited as their geographic origin was not known with enough precision or the sequence quality was doubted. These filters were not applied consistently. The goal is to mirror the current state of knowledge as far as possible in terms of the diversity of mitochondrial lineages and coverage of their geographic distributions, so a handful of somewhat dubiously localized records were included as these were unique sequences. Checking the comments collumn of the metadata table is always recommended.
 #### How are the sequences linked to metadata?
@@ -168,22 +168,19 @@ Only the name stem is given here, which is preceded by version in the actual fil
 **Helicini_table_mol**: species identifications, sampling locality data, NCBI accession numbers, shell vouchers, and other relevant metadata relating to the origin of the sequences and their use in publications; detailed explanation of columns inside the file on additional sheets (and above under **"The metadata"**)
 
 #### mitogenome annotations (plain text file)
-**mitogenome_annotations**: annotation of mitogenomic sequences in the GFF3 format, including the positions where the the individual alignment files align. The up-to-date annotation is indicated by "current" in the "source" field.
+**mitogenome_annotations** **[comming soon]**: annotation of mitogenomic sequences in the GFF3 format, including the positions where the the individual alignment files align. The up-to-date annotation is indicated by "current" in the "source" field.
 
 #### phylogenetic tree (plain text file)
 **tree_Helicini**: a composite ultrametric tree providing an estimate of the relationships among the individuals represented among the sequences (not all are included!). The annotation contains support values (posterior probabilities) and GPS coordinates (for internal nodes estimated as described in ...yet to be added...). Use the function `annotatedTreeReader` to read the tree in R (if the package is installed, type `system.file("extdata", "tree_Helicini.nex", package = "mitoHelicini")` to get the path), or FigTree.
 
-#### change log (plain text file)
-**change_log**: record of revisions of the above files, in particular of the alignment files.
-
 ### The functions
-The package provides a set of utilities used to curate and export the data provided with the package and functions used to produce the tree file `tree_Helicini.tre`. The most important function is `representative.alignment`, which helps to export phylogenetically representative (at the level of intraspecific clades, species, or genera) or complete (all individuals) datasets, exporting a concantenate of selected loci or complete mitogenome sequences. As the data provided in the package are aligned, the exported dataset can be radily used for analyses.
+The package provides a set of utilities used to curate and export the data provided with the package and functions used to produce the tree file `tree_Helicini.tre` **[comming soon]**. The most important function is `representative.alignment`, which helps to export phylogenetically representative (at the level of intraspecific clades, species, or genera) or complete (all individuals) datasets, exporting a concantenate of selected loci or complete mitogenome sequences. As the data provided in the package are aligned, the exported dataset can be radily used for analyses.
 Use `help(function_name)` for details of each function.
 
 ### Acknowledgements
-The function `annotatedTreeReader` was written by Marc A. Suchard and originates from a no-longer maintained package "OutbreakTools" (Jombart et al. 2014).
+The function `annotatedTreeReader` **[comming soon]** was written by Marc A. Suchard and originates from a no-longer maintained package "OutbreakTools" (Jombart et al. 2014).
 
-The function `write_supertree` is a modification of a function `write.tree` from the package `ape` by Emmanuel Paradis, Daniel Lawson, and Klaus Schliep. 
+The function `supertree`  **[comming soon]** is a modification of a function `write.tree` from the package `ape` by Emmanuel Paradis, Daniel Lawson, and Klaus Schliep. 
 
 ### Funding
 The core of the R package was developed during my postdoc funded by scholarship from the Alexander-von-Humboldt Stiftung.
