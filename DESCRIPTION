@@ -1,6 +1,6 @@
 Package: mitoHelicini
 Title: EXPLORE AND EXPORT MITOCHONDRIAL SEQUENCES OF HELICINI LAND SNAILS
-Version: 0.1
+Version: 0.0
 Authors@R: 
     person("Ondřej", "Korábek", , "korabeko@natur.cuni.cz", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-2522-9165"))
