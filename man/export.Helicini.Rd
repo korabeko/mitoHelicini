@@ -4,10 +4,7 @@
 \alias{export.Helicini}
 \title{Export Helicini dataset into your working directory.}
 \usage{
-export.Helicini(readme = FALSE)
-}
-\arguments{
-\item{readme}{Boolean. Default FALSE, TRUE prints the readme file accompanying the data.}
+export.Helicini()
 }
 \value{
 Creates an directory './Helicini_data' and copies the full mitochondrial Helicini dataset with metadata into this directory.
