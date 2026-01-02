@@ -8,7 +8,7 @@
 
 # version 02.01.2026
 
-export.Helicini<-function(readme=FALSE){
+export.Helicini<-function(){
 exportDIR <- paste("./Helicini_data_",packageVersion("mitoHelicini"),sep="")
 if(!dir.exists(file.path(exportDIR))){
 
