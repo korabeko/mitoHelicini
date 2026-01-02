@@ -188,6 +188,10 @@ The function `write_supertree` is a modification of a function `write.tree` from
 ### Funding
 The core of the R package was developed during my postdoc funded by scholarship from the Alexander-von-Humboldt Stiftung.
 
+### Versions
+#### 201231 [published Jan 14, 2022 on Dryad: https://doi.org/10.5061/dryad.pnvx0k6p5; published on GitHub Jan 1, 2026]
+Original data published in Dryad by Korábek et al. 2022 (*Diversity*). The only correction made concerns the species identification and locality data for *Maltzanella escherichi* and *Helix ankae* (see Korábek & Hausdorf 20223 *Archiv für Molluskenkunde*).
+
 ### References (sources of the sequence data)
 Bouaziz–Yahiatene H, Pfarrer B, Medjdoub-Bensaad F, Neubert E. (2017). Revision of *Massylaea* Möllendorff, 1898 (Stylommatophora, Helicidae). *ZooKeys* 694: 109–133. https://doi.org/10.3897/zookeys.694.15001
 
