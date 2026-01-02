@@ -6,7 +6,7 @@
 #' @return Creates an directory './Helicini_data' and copies the full mitochondrial Helicini dataset with metadata into this directory.
 #' @examples
 
-# version 28.01.2022
+# version 02.01.2026
 
 export.Helicini<-function(readme=FALSE){
 exportDIR <- paste("./Helicini_data_",packageVersion("mitoHelicini"),sep="")
