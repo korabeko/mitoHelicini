@@ -41,7 +41,7 @@ There is peculiar form of small *Helix* (*Pelasga*) living at/around the crusade
 ##### *Isaurica riedeli*
 This is the largest species of the genus and the last without any sequence. It is a massive rock-dwelling snail with depressed shell, which only lives in a small area in the east of the province of Adana in Turkey. It is known from only a couple localities along the route between Akseki, Güçlüköy (formerly Fersin) and Gençler and also from the left side of the Manavgat valley: below Üzümdere and between Yaylaalan and Ürünlü.
 ##### *Levantina guttata mesopotamica*
-Currently considered a synonym of L. guttata, this is a geographically interesting form of a rock dwelling, flattened snail living in the Sinjar Mountains, Iraq. It was recorded only from its type locality at the northern side of the mountains, near Sharaf ad Din.
+Currently considered a synonym of *L. guttata*, this is a geographically interesting form of a rock dwelling, flattened snail living in the Sinjar Mountains, Iraq. It was recorded only from its type locality at the northern side of the mountains, near Sharaf ad Din.
 ##### *Levantina semitecta*
 Flattened, rock-dwelling snail of about 2 cm in diameter. It was never seen alive and it is uncertain where it does live. The type locality is stated as "Midian". Therefore, it presumably originates from northern Hijaz, an area in Saudi Arabia that stretches from the south of Jabal al-Lawz to Al Wajh at the Red Sea shore and includes Jabal al-Dubbagh. 
 
