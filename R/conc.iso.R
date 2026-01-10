@@ -2,15 +2,28 @@
 #'
 #' Performs concatenation of sequences using 8-letter identifiers at the beginning of fasta headers.
 #' @param alignments list. List containing fasta sequence alignments loaded in as data.frame or character vector by read.table.
+#' @param filepath Boolean. Specifies whether 'alignments' is a list of vectors containing the alignments (default), or a vector with paths to alignments files.
 #' @param save Boolean. If TRUE, the results will be saved into a fasta file.
 #' @param file character. Name of the file containing the concatenated alignment, if save=TRUE)
-#' @param uknown character. The character used to denote missing data when the individual is not represented by a given locus. Does affect coding of missing data in the concatenated alignments. Default "?", other meaningful options are "-" (same as gap) or "N" (it is assumed that there is a nucleotide).
+#' @param unknown character. The character used to denote missing data when the individual is not represented by a given locus. Does affect coding of missing data in the concatenated alignments. Default "?", other meaningful options are "-" (same as gap) or "N" (it is assumed that there is a nucleotide).
 #' @export
 #' @return Returns concatenated alignment in a sequential FASTA format as an character vector.
 
-# version 17.04.2022
+# version 09.01.2026
 
-conc.iso<-function (alignments,save=T,file="concatenate.fas",uknown="?"){
+conc.iso<-function (alignments,filepath=FALSE,save=TRUE,file="concatenate.fas",unknown="?"){
+
+if(filepath==TRUE){
+  a<-1
+  al.names<-character(0)
+  repeat{
+    assign(paste0(alignments[a]),read.table(file.path(alignments[a]),header=F,stringsAsFactors = FALSE))
+    al.names<-c(al.names,paste0(alignments[a]))
+    a<-a+1
+    if(a>length(alignments)){break}
+  }
+  alignments<-mget(al.names)
+}  
 
 #starts by taking the first alignment file and recording which individuals from the other files are not present in the first one.
 differences<-vector(mode="character")
@@ -37,18 +50,6 @@ names<-unlist(lapply(alignments,FUN=function(x){
 }))
 names<-unique(names)
 
-
-#scans all alignments 2 to n for individuals not present in the first one.
-#for(k in 2:length(alignments)){
-# uniqs<-setdiff(substr(alignments[[k]][2*(1:(length(alignments[[k]])/2))-1],1,9),substr(alignments[[1]][2*(1:(length(alignments[[1]])/2))-1],1,9))
-# differences<-c(differences,uniqs)
-#}
-#unique2<-unique(differences)
-
-#appends the sequence IDs from the first alignment to those from the previous step to have a complete list of all individuals represented in alignments
-#names<-substr(alignments[[1]][seq(1,length(alignments[[1]]),by=2)],1,9)
-#names<-c(names,unique2)
-
 #creates an empty concatenated aligment
 n.seq<-length(names)
 concatenated<-rep("",n.seq*2)
@@ -59,7 +60,7 @@ for(j in 1:length(alignments)){ #iterates over single gene alignments
 
  #print(paste("alignment:",j)) #for testing
 
- gaps1<-paste(rep(uknown,times=nchar(alignments[[j]][2])),collapse="") #creates gaps for sequences missing in alignment j
+ gaps1<-paste(rep(unknown,times=nchar(alignments[[j]][2])),collapse="") #creates gaps for sequences missing in alignment j
 
  for (i in 1:n.seq){
 
