@@ -4,16 +4,24 @@
 \alias{conc.iso}
 \title{Concatenate sequences based on identifiers in the fasta header.}
 \usage{
-conc.iso(alignments, save = T, file = "concatenate.fas", uknown = "?")
+conc.iso(
+  alignments,
+  filepath = FALSE,
+  save = TRUE,
+  file = "concatenate.fas",
+  unknown = "?"
+)
 }
 \arguments{
 \item{alignments}{list. List containing fasta sequence alignments loaded in as data.frame or character vector by read.table.}
+
+\item{filepath}{Boolean. Specifies whether 'alignments' is a list of vectors containing the alignments (default), or a vector with paths to alignments files.}
 
 \item{save}{Boolean. If TRUE, the results will be saved into a fasta file.}
 
 \item{file}{character. Name of the file containing the concatenated alignment, if save=TRUE)}
 
-\item{uknown}{character. The character used to denote missing data when the individual is not represented by a given locus. Does affect coding of missing data in the concatenated alignments. Default "?", other meaningful options are "-" (same as gap) or "N" (it is assumed that there is a nucleotide).}
+\item{unknown}{character. The character used to denote missing data when the individual is not represented by a given locus. Does affect coding of missing data in the concatenated alignments. Default "?", other meaningful options are "-" (same as gap) or "N" (it is assumed that there is a nucleotide).}
 }
 \value{
 Returns concatenated alignment in a sequential FASTA format as an character vector.
