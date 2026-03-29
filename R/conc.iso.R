@@ -17,7 +17,7 @@ if(filepath==TRUE){
   a<-1
   al.names<-character(0)
   repeat{
-    assign(paste0(alignments[a]),read.table(file.path(alignments[a]),header=F,stringsAsFactors = FALSE))
+    assign(paste0(alignments[a]),utils::read.table(file.path(alignments[a]),header=F,stringsAsFactors = FALSE))
     al.names<-c(al.names,paste0(alignments[a]))
     a<-a+1
     if(a>length(alignments)){break}
@@ -86,7 +86,7 @@ for(j in 1:length(alignments)){ #iterates over single gene alignments
 } #end outer if
 } #end outer loop
 
-if(save==T){write.table(concatenated,file,col.names=F,row.names=F,quote=F)}
+if(save==T){utils::write.table(concatenated,file,col.names=F,row.names=F,quote=F)}
 return(concatenated)
 #end of function
 }
