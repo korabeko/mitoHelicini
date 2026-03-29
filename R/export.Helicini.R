@@ -4,7 +4,6 @@
 #' @importFrom utils packageVersion
 #' @export
 #' @return Creates an directory './Helicini_data' and copies the full mitochondrial Helicini dataset with metadata into this directory.
-#' @examples
 
 # version 02.01.2026
 
