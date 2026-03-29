@@ -15,7 +15,7 @@
 # version 14.4.2022
 
 selector<-function (individuals,alignment,save=T,filename){
-if(class(alignment)=="data.frame"){alignment<-alignment[,1]}
+if (inherits(alignment, "data.frame")) {alignment<-alignment[,1]}
 vyber<-vector(length=length(individuals)*2,mode="character")
 for (i in 1:length(individuals)){
 	#print(paste(i,": ",individuals[i]))
