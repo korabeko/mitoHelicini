@@ -1,6 +1,6 @@
 Package: mitoHelicini
 Title: EXPLORE AND EXPORT MITOCHONDRIAL SEQUENCES OF HELICINI LAND SNAILS
-Version: 0.0
+Version: 0.1.0
 Authors@R: 
     person("Ondřej", "Korábek", , "korabeko@natur.cuni.cz", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-2522-9165"))
@@ -8,7 +8,7 @@ Description: Explore, handle and export mitochondrial sequences of Helicini land
 License: CC BY 4.0  + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.2.3
+RoxygenNote: 7.3.3
 Depends: 
     ape,
     readODS,
