@@ -18,7 +18,6 @@
 #' @importFrom readODS read_ods
 #' @export
 #' @return Returns a list of the following objects: "per.group.inds","lengths.ordered.groups","missing.loci","best.alignments","final.alignment". "per.group.inds" gives the number of individuals in each group specified by "level" parameter. 'missing.loci' has three values: 0=locus present in the best scoring individual, 1=locus missing in the best scoring individual ,2=locus missing for the group altogether. "lengths.ordered.groups" contains all the sequence lengths structured by group and locus.
-#' @examples
 
 # version 10.1.2024
 # calls selector, seq_lengths, conc.iso
