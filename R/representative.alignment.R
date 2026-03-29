@@ -19,7 +19,7 @@
 #' @export
 #' @return Returns a list of the following objects: "per.group.inds","lengths.ordered.groups","missing.loci","best.alignments","final.alignment". "per.group.inds" gives the number of individuals in each group specified by "level" parameter. 'missing.loci' has three values: 0=locus present in the best scoring individual, 1=locus missing in the best scoring individual ,2=locus missing for the group altogether. "lengths.ordered.groups" contains all the sequence lengths structured by group and locus.
 
-# version 10.1.2024
+# version 29.03.2026
 # calls selector, seq_lengths, conc.iso
 
 representative.alignment<-function(level=c("ID","subclade","clade","genus"),genes=c("COX1","TRNV","16S","TRNL1_TRNA","ND6","TRNP","ND5","ND1_ND4L","CYTB","TRND-TRNF","COX2","TRNY-TRNL2","ATP8","TRNN","ATP6","TRNR_TRNE","12S_TRNM","ND3","TRNS2_TRNT","COX3","TRNS1","ND4","TRNI","ND2","TRNK"),genus=NULL,species=NULL,individuals=NULL,weight=c("max","average"),maxloci=FALSE,save=TRUE,file="representative.fas",save_single=FALSE){
