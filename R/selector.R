@@ -27,6 +27,6 @@ for (i in 1:length(individuals)){
 	vyber[2*i]<-alignment[which(substr(alignment,2,9)==individuals[i])+1]
 	}
 	}
-if(save==T){write.table(vyber,filename,col.names=F,row.names=F,quote=F)}
+if(save==T){utils::write.table(vyber,filename,col.names=F,row.names=F,quote=F)}
 return(vyber)
 }
