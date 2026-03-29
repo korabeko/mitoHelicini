@@ -31,7 +31,10 @@ representative.alignment<-function(level=c("ID","subclade","clade","genus"),gene
   if(length(weight)!=1){stop("Weight must be specified! See help for details")}
   if(maxloci==TRUE){weight<-match.arg(weight)}else{weight<-"max"}
   genes<-match.arg(genes,several.ok = TRUE)
-  if(level=="ID"&maxloci==TRUE){stop("If exporting data for selected or all individuals (level=\"ID\"), maxloci must be set to FALSE")}
+  if(level=="ID"&maxloci==TRUE){
+    warning("If exporting data for selected or all individuals (level=\"ID\"), maxloci must be set to FALSE. It has been set to FALSE for you.")
+    maxloci<-FALSE
+    }
 
   #read the master table with sequence metadata
   tab.file<-list.files(system.file("extdata",package = "mitoHelicini"))
