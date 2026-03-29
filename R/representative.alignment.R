@@ -46,7 +46,7 @@ representative.alignment<-function(level=c("ID","subclade","clade","genus"),gene
 
   #read the alignments
   alignments<-lapply(alignment.file,FUN=function(x){
-    read.table(paste(system.file("extdata",package = "mitoHelicini"),"/",x,sep=""),header=F,as.is=TRUE,sep="\t")[,1,drop=TRUE]
+    utils::read.table(paste(system.file("extdata",package = "mitoHelicini"),"/",x,sep=""),header=F,as.is=TRUE,sep="\t")[,1,drop=TRUE]
   })
 
   #extract the genera wanted, if specified
@@ -268,7 +268,7 @@ representative.alignment<-function(level=c("ID","subclade","clade","genus"),gene
   #save single gene alignments
   if(save_single==TRUE){
     for(i in 1:length(best.alignments)){
-      write.table(best.alignments[i],file=paste0(names(best.alignments)[i],".fas"),quote=FALSE,col.names=FALSE,row.names=FALSE)
+      utils::write.table(best.alignments[i],file=paste0(names(best.alignments)[i],".fas"),quote=FALSE,col.names=FALSE,row.names=FALSE)
     }
   }
 
