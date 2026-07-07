@@ -38,8 +38,12 @@ The sequences are provided with complete metadata (locality, date of collection,
 #### Missing taxa - WANTED!
 ##### *Helix* sp.
 There is peculiar form of small *Helix* (*Pelasga*) living at/around the crusader's castle Krak des Chevaliers in Syria, located between Homs and Tartus. It has a shell with olive-brown periostracum. The species identity is uncertain.
+##### *Helix anctostoma*
+The typical form lives in the Hatay province of Turkey, in the Belen Pass. It has a densely coiled shell with a knob on the columella.
 ##### *Isaurica riedeli*
 This is the largest species of the genus and the last without any sequence. It is a massive rock-dwelling snail with depressed shell, which only lives in a small area in the east of the province of Adana in Turkey. It is known from only a couple localities along the route between Akseki, Güçlüköy (formerly Fersin) and Gençler and also from the left side of the Manavgat valley: below Üzümdere and between Yaylaalan and Ürünlü.
+##### *Levantina bellardii occlusa*
+Non-umbilicated form of the cypriot species of the rock-dwelling genus *Levantina*, known most certainly from the mountains between Beylerbeyi and the Agios Chrysostomos monastery by Güngör (east of the Nicosia - Girne road). 
 ##### *Levantina guttata mesopotamica*
 Currently considered a synonym of *L. guttata*, this is a geographically interesting form of a rock dwelling, flattened snail living in the Sinjar Mountains, Iraq. It was recorded only from its type locality at the northern side of the mountains, near Sharaf ad Din.
 ##### *Levantina semitecta*
